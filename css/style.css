@@ -1053,11 +1053,29 @@ input[type="checkbox"]:checked+label::before {
 }
 
 .carousel__prev-arrow {
+    width: 12px;
+    height: 12px;
+    padding: 6px;
+    border: 1px solid var(--gray);
+    border-radius: 50%;
     cursor: pointer;
+    transition: all .3s;
 }
 
 .carousel__next-arrow {
+    width: 12px;
+    height: 12px;
+    padding: 6px;
+    border: 1px solid var(--gray);
+    border-radius: 50%;
     cursor: pointer;
+    transition: all .3s;
+}
+
+.carousel__next-arrow:hover,
+.carousel__prev-arrow:hover{
+    border-color: var(--white);
+    color: var(--orange);
 }
 
 .carousel__buttons-counter {
@@ -1136,7 +1154,7 @@ input[type="checkbox"]:checked+label::before {
     height: auto;
     display: block;
     border-radius: 50%;
-    margin-right: 9px;
+    margin-right: 12px;
 }
 
 .footer__bottom-services {
@@ -1145,7 +1163,6 @@ input[type="checkbox"]:checked+label::before {
     line-height: 135%;
     display: flex;
     align-items: center;
-    letter-spacing: 0.02em;
     color: #ADADAD;
 }
 /* -----------------------------------footer right section------------------------------------------- */
