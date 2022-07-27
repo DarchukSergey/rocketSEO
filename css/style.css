@@ -1961,12 +1961,12 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .footer{
-        background-image: url('../img/footer-bgMobile.png');
+        background-image: url('../img/footer-BgMobile.png');
         min-height: 0;
     }
 
     .footer__inner{
-        background-image: none;
+        background-image: transparent;
         padding-top: 100px;
     }
 
