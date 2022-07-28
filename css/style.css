@@ -663,7 +663,7 @@ section {
     content: '';
     position: absolute;
     background-image: url('../img/arrow-right.svg');
-    transform: rotate(180deg);
+    transform: rotate(0deg);
     background-repeat: no-repeat;
     background-position: center;
     width: 18px;
