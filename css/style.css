@@ -1867,15 +1867,11 @@ input[type="checkbox"]:checked+label::before {
     .price__accordion-title::after {
         background-image: url('../img/arrow-rightMob.svg');
         transform: rotate(0deg);
-        width: 14px;
-        height: 8px;
-        top: 25px;
-        right: 6px;
     }
 
     .price__accordion-title.active::after {
         transform: rotate(180deg);
-        top: 26px;
+        top: 12px;
         right: 3px;
     }
 
@@ -1963,22 +1959,13 @@ input[type="checkbox"]:checked+label::before {
         right: -9%;
     }
 
-<<<<<<< HEAD
     .footer {
-=======
-    .footer{
->>>>>>> d2d06f451c4280e27d53c165b76d8205da53ebf3
         background-image: url('../img/footer-BgMobile.png');
         min-height: 0;
     }
 
-<<<<<<< HEAD
     .footer__inner {
         background-image: none;
-=======
-    .footer__inner{
-        background-image: transparent;
->>>>>>> d2d06f451c4280e27d53c165b76d8205da53ebf3
         padding-top: 100px;
     }
 
