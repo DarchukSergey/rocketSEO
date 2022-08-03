@@ -107,4 +107,26 @@ $(function () {
         });
 
     });
+    const chatIcon = new Vivus('chat', {
+        type: 'oneByOne',
+        duration: 200,
+    }, myVivus => {
+        if (myVivus.getStatus() === 'end') {
+            myVivus.reset().play();
+        }
+    });
+
+
+    // const chatIcons = new Vivus(
+    //     'solutions',
+    //     {
+    //         type: 'scenario',
+    //         duration: 300,
+    //         reverseStack:true,
+    //         delay: 200,
+    //     },myVivus => {
+    //         if (myVivus.getStatus() === 'end') {
+    //             myVivus.reset().play();
+    //         }
+    //     });
 });
