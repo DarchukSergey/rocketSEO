@@ -109,7 +109,7 @@ $(function () {
     });
     const chatIcon = new Vivus('chat', {
         type: 'oneByOne',
-        duration: 200,
+        duration: 250,
     }, myVivus => {
         if (myVivus.getStatus() === 'end') {
             myVivus.reset().play();

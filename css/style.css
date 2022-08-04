@@ -2019,7 +2019,7 @@ input[type="checkbox"]:checked+label::before {
 #compas {
     transform-origin: 50% 50%;
     transform-box: fill-box;
-    animation: rotateCompas 2.5s linear infinite;
+    animation: rotateCompas 3.5s linear infinite;
 }
 
 @keyframes rotateCompas {
@@ -2027,17 +2027,20 @@ input[type="checkbox"]:checked+label::before {
         transform: rotate(0deg);
     }
 
-    30% {
-        transform: rotate(30deg);
-    }
 
-    60% {
+    33% {
         transform: rotate(60deg);
     }
 
-    90% {
+    66% {
+        transform: rotate(0deg);
+    }
+
+
+    83% {
         transform: rotate(-30deg);
     }
+
 
     100% {
         transform: rotate(0deg);
@@ -2045,7 +2048,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 #result-search {
-    animation: resultSearch 2s linear infinite;
+    animation: resultSearch 3.5s linear infinite;
 }
 
 @keyframes resultSearch {
@@ -2070,7 +2073,7 @@ input[type="checkbox"]:checked+label::before {
     width: 2px;
     height: 2px;
     display: block;
-    animation: resultSearchArrow 2000ms linear infinite;
+    animation: resultSearchArrow 3.5s linear infinite;
 }
 
 @keyframes resultSearchArrow {
@@ -2090,7 +2093,7 @@ input[type="checkbox"]:checked+label::before {
 #semantic-arrow {
     transform-origin: 100% 100%;
     transform-box: fill-box;
-    animation: semanticArrow 2s linear infinite;
+    animation: semanticArrow 3s linear infinite;
 }
 
 @keyframes semanticArrow {
@@ -2098,131 +2101,179 @@ input[type="checkbox"]:checked+label::before {
         transform: rotate(-60deg) translate(-76px, 68px);
         opacity: 1;
     }
+
+    5% {
+        transform: rotate(-50deg) translate(-69px, 61px);
+    }
+
     10% {
-        transform: rotate(-50deg) translate(-69px, 65px);
+        transform: rotate(-40deg) translate(-61px, 55px);
+        opacity: 1;
     }
+
+    15% {
+        transform: rotate(-30deg) translate(-54px, 48px);
+        opacity: 1;
+    }
+
     20% {
-        transform: rotate(-40deg) translate(-62px, 63px);
+        transform: rotate(-20deg) translate(-46px, 40px);
         opacity: 1;
     }
+
+    25% {
+        transform: rotate(-10deg) translate(-39px, 33px);
+        opacity: 1;
+    }
+
     30% {
-        transform: rotate(-30deg) translate(-56px, 55px);
+        transform: rotate(0deg) translate(-31px, 27px);
         opacity: 1;
     }
+
+    35% {
+        transform: rotate(10deg) translate(-24px, 20px);
+        opacity: 1;
+    }
+
     40% {
-        transform: rotate(-20deg) translate(-48px, 46px);
+        transform: rotate(10deg) translate(-10px, 7px);
         opacity: 1;
     }
+
     50% {
-        transform: rotate(-10deg) translate(-40px, 39px);
-        opacity: 1;
+        transform: rotate(10deg) translate(-10px, 7px);
+        opacity: .9;
     }
+
     60% {
-        transform: rotate(0deg) translate(-32px, 31px);
-        opacity: 1;
+        transform: rotate(10deg) translate(-10px, 7px);
+        opacity: .7;
     }
+
     70% {
-        transform: rotate(10deg) translate(-24px, 23px);
-        opacity: 1;
+        transform: rotate(10deg) translate(-10px, 7px);
+        opacity: .4;
     }
-    80% {
-        transform: rotate(20deg) translate(-16px, 15px);
-        opacity: 1;
-    }
+
     100% {
-        transform: rotate(30deg) translate(0px, 0px);
         opacity: 0;
     }
 }
 
 #semantic-star1 {
-    animation: semanticStar1 2s linear infinite;
+    animation: semanticStar1 3s linear infinite;
+    opacity: 0;
 }
-@keyframes  semanticStar1{
+
+@keyframes semanticStar1 {
     20% {
         opacity: 0;
     }
-    100% {
+
+    65% {
         opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
 #semantic-star2 {
-    animation: semanticStar2 2s linear infinite;
+    animation: semanticStar2 3s linear infinite;
+    opacity: 0;
 }
-@keyframes  semanticStar2{
+
+@keyframes semanticStar2 {
     30% {
         opacity: 0;
     }
-    100% {
+
+    65% {
         opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
 #semantic-star3 {
-    animation: semanticStar3 2s linear infinite;
+    animation: semanticStar3 3s linear infinite;
+    opacity: 0;
 }
-@keyframes  semanticStar3{
+
+@keyframes semanticStar3 {
     40% {
         opacity: 0;
     }
-    100% {
+
+    65% {
         opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
 #semantic-star4 {
-    animation: semanticStar4 2s linear infinite;
+    animation: semanticStar4 3s linear infinite;
+    opacity: 0;
 }
-@keyframes  semanticStar4{
+
+@keyframes semanticStar4 {
     50% {
         opacity: 0;
     }
-    100% {
+
+    65% {
         opacity: 1;
     }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-#semantic-cross{
-    animation: semanticCross 2s linear infinite;
+#semantic-cross {
+    animation: semanticCross 3s linear infinite;
     transform-origin: 50% 50%;
     transform-box: fill-box;
+    transform: rotate(0) scale(1.2);
 }
 
-@keyframes  semanticCross{
-    0% {
-        transform: rotate(0);
+@keyframes semanticCross {
+    25% {
+        transform: rotate(0) scale(.8);
     }
-    50% {
-        transform: rotate(45deg);
-    }
-    100% {
-        transform: rotate(0deg);
+    75% {
+        transform: rotate(75deg) scale(.8) ;
     }
 }
 
-#semantic-circle{
-    animation: semanticCircle 2s linear infinite;
+#semantic-circle {
+    animation: semanticCircle 3s linear infinite;
+    stroke-width: 4;
 }
 
-@keyframes semanticCircle{
-    0% {
+@keyframes semanticCircle {
+    
+    25% {
+        stroke-width: 1;
+    }
+    75% {
         stroke-width: 1;
     }
 
-    50% {
-        stroke-width: 4;
-    }
-
-    100% {
-        stroke-width: 1;
-    }
+    
 }
 
 #chat-circle {
     transform-origin: 50% 50%;
     transform-box: fill-box;
-    animation: rotateChat 4000ms linear infinite;
+    animation: rotateChat 4500ms linear infinite;
 }
 
 @keyframes rotateChat {
@@ -2235,131 +2286,116 @@ input[type="checkbox"]:checked+label::before {
     }
 }
 
-#solution-arrow{
+#solution-arrow {
     transform-origin: 41% 56%;
     transform-box: fill-box;
-    animation: solutionArrow 2s linear infinite;
+    animation: solutionArrow 4s linear infinite;
 }
 
-@keyframes solutionArrow{
+@keyframes solutionArrow {
     0% {
         transform: rotate(360deg);
         opacity: 1;
     }
 
-    50%{
+    50% {
         opacity: 0;
     }
-    100% { transform: rotate(0deg);
-        
+
+    100% {
+        transform: rotate(0deg);
+
         opacity: 1;
     }
-    
+
 }
 
-#solution-dotts{
+#solution-dotts {
     transform-origin: 75% 31%;
     transform-box: fill-box;
-    animation: solutionDotts 2s linear infinite;
+    animation: solutionDotts 4s linear infinite;
 }
 
-@keyframes solutionDotts{
+@keyframes solutionDotts {
     0% {
         transform: rotate(360deg);
         opacity: 0;
     }
 
-    50%{
+    50% {
         opacity: 1;
     }
-    100% { transform: rotate(0deg);
-        opacity: 0;
-        
-    }
-    
-}
 
-#exclamation{
-    animation: questions 2s linear infinite;
-}
-
-@keyframes questions{
-
-    0% {
-        transform: translate(0,-40px);
-    }
-    20% {
-        transform: translate(0, 5px);
-    }
-    40% {
-        transform: translate(0, -3px);
-    }
-    60% {
-        transform: translate(0, 3px);
-    }
-    80% {
-        transform: translate(0, -1px);
-    }
-    90%{
-        transform: translate(0, 0);
-    }
     100% {
-        transform: translate(0, 0);
+        transform: rotate(0deg);
+        opacity: 0;
+
     }
 
 }
-#questions {
-    animation: exclamation 2s linear infinite;
+
+#exclamation {
+    animation: exclamation 2.5s linear infinite;
 }
 
-@keyframes exclamation{
+@keyframes exclamation {
+
     0% {
-        transform: translate(0,40px);
+        transform: translate(0, 40px);
     }
+
     20% {
         transform: translate(0, -5px);
     }
+
     40% {
         transform: translate(0, 3px);
     }
+
     60% {
         transform: translate(0, -3px);
     }
+
     80% {
         transform: translate(0, 1px);
     }
 
-    90%{
+    90% {
         transform: translate(0, 0);
     }
 
     100% {
         transform: translate(0, 0);
     }
+
 }
 
-#questions-arrow{
-    animation: questionsArrow 2s linear infinite;
+#questions {
+    animation: questions 2.5s linear infinite;
 }
 
-@keyframes questionsArrow{
+@keyframes questions {
     0% {
-        transform: translate(40px,0);
+        transform: translate(0, -40px);
     }
+
     20% {
-        transform: translate(-5px, 0);
+        transform: translate(0, 5px);
     }
+
     40% {
-        transform: translate(3px, 0);
-    }
-    60% {
-        transform: translate(-3px, 0);
-    }
-    80% {
-        transform: translate( 1px, 0);
+        transform: translate(0, -3px);
     }
 
-    90%{
+    60% {
+        transform: translate(0, 3px);
+    }
+
+    80% {
+        transform: translate(0, -1px);
+    }
+
+    90% {
         transform: translate(0, 0);
     }
 
@@ -2368,29 +2404,90 @@ input[type="checkbox"]:checked+label::before {
     }
 }
 
-#exclamation-arrow{
-    animation: exclamationArrow 2s linear infinite;
+#questions-arrow {
+    animation-name: questionsArrow;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-delay: 2500ms;
+    animation-iteration-count: infinite;
+    /* animation: questionsArrow 2s  1s infinite; */
 }
 
-@keyframes exclamationArrow{
+@keyframes questionsArrow {
     0% {
-        transform: translate(-40px,0);
+        transform: translate(-80px, 0);
+
     }
+
     20% {
+        transform: translate(-80px, 0);
+    }
+
+    40% {
+        transform: translate(-80px, 0);
+    }
+
+    60% {
         transform: translate(5px, 0);
     }
-    40% {
+
+    70% {
         transform: translate(-3px, 0);
     }
-    60% {
+
+    80% {
         transform: translate(3px, 0);
     }
-    80% {
+
+    90% {
         transform: translate(-1px, 0);
     }
 
-    90%{
+    100% {
         transform: translate(0, 0);
+    }
+}
+
+#exclamation-arrow {
+    /* animation: exclamationArrow 2s  1s infinite; */
+
+    animation-name: exclamationArrow;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-delay: 2500ms;
+    animation-iteration-count: infinite;
+    /* animation-fill-mode: как указано
+    animation-play-state: как указано */
+}
+
+@keyframes exclamationArrow {
+    0% {
+        transform: translate(80px, 0);
+
+    }
+
+    20% {
+        transform: translate(80px, 0);
+    }
+
+    40% {
+        transform: translate(80px, 0);
+    }
+
+    60% {
+        transform: translate(-5px, 0);
+    }
+
+    70% {
+        transform: translate(3px, 0);
+    }
+
+    80% {
+        transform: translate(-3px, 0);
+    }
+
+    90% {
+        transform: translate(1px, 0);
     }
 
     100% {
