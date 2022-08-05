@@ -2055,6 +2055,9 @@ input[type="checkbox"]:checked+label::before {
 
 
 @media (max-width: 470px) {
+    .top__inner{
+        background-position: 20%;
+    }
     .carousel__item {
         min-height: 260px;
         max-height: 260px;
