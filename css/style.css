@@ -2171,7 +2171,7 @@ input[type="checkbox"]:checked+label::before {
         opacity: 0;
     }
 
-    65% {
+    27% {
         opacity: 1;
     }
 
@@ -2190,7 +2190,7 @@ input[type="checkbox"]:checked+label::before {
         opacity: 0;
     }
 
-    65% {
+    37% {
         opacity: 1;
     }
 
@@ -2209,7 +2209,7 @@ input[type="checkbox"]:checked+label::before {
         opacity: 0;
     }
 
-    65% {
+    47% {
         opacity: 1;
     }
 
@@ -2228,7 +2228,7 @@ input[type="checkbox"]:checked+label::before {
         opacity: 0;
     }
 
-    65% {
+    57% {
         opacity: 1;
     }
 
