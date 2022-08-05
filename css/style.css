@@ -1561,6 +1561,9 @@ input[type="checkbox"]:checked+label::before {
 
 /* ------------------------------------------------------MEDIA 768------------------------------------------ */
 @media (max-width: 768px) {
+    .top__inner {
+        background-image: url('../img/header.png'), none;
+    }
 
     .stages__inner {
         flex-direction: column;
@@ -1668,11 +1671,13 @@ input[type="checkbox"]:checked+label::before {
 
     .top {
         margin-bottom: 0;
+        background-image: none;
     }
 
     .top__inner {
         background-size: cover;
         background-position: 42% 98%;
+        background-image: url('../img/header.png'), none;
     }
 
     .top__title {
