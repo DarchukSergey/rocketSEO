@@ -96,19 +96,44 @@ section {
 .top {
     margin-bottom: 20px;
     background-image: url('../img/rocket.gif');
-    background-position: left bottom;
+    background-position: left 850px;
     background-repeat: no-repeat;
     background-size: 250px;
+    animation-delay: 2s;
+	animation-duration: 1s;
+	animation-name: rocket;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+
+@keyframes rocket {
+    0% {
+        background-position: left 850px;
+    }
+
+    100% {
+        background-position: left bottom;
+    }
 }
 
 .top__inner {
     min-height: 820px;
     background: url('../img/header.png') center no-repeat,
-                    url('../img/header2.png')  center 25% no-repeat;
+        url('../img/header2.png') center 25% no-repeat;
     background-size: auto, auto;
-    /* background-position:  3000px 80%, 280% 40% ;  */
     margin-top: 109px;
-    animation: top-arrow 2s 2s linear 1;
+    animation: top-arrow 2s linear 1;
+}
+
+@keyframes top-arrow {
+    0% {
+        background-position: 3000px 80%, -3000px 0%;
+    }
+
+    100% {
+        background-position: center, center 25%;
+    }
 }
 
 .top__title {
@@ -141,11 +166,29 @@ section {
     text-decoration: none;
     max-width: 260px;
     padding: 21px 0;
+    animation-delay: 2s;
+	animation-duration: 2s;
+	animation-name: top-button;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+    animation-fill-mode:forwards;
+    opacity: 0;
 }
 
-.animate__fadeIn{
+@keyframes top-button {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate__fadeIn {
     --animate-duration: 3s;
-  }
+}
+
 /* ----------------------------------------------------------------- NOEXPERIMENTS --------------------------------------------------------------------------- */
 
 .noexperiments {
@@ -1327,6 +1370,7 @@ input[type="checkbox"]:checked+label::before {
         padding-left: 20px;
     }
 }
+
 /* ------------------------------------------------- MEDIA 992 ----------------------------------------------- */
 @media (max-width: 992px) {
 
@@ -1503,6 +1547,7 @@ input[type="checkbox"]:checked+label::before {
         display: none;
     }
 }
+
 /* ------------------------------------------------------MEDIA 930------------------------------------------ */
 @media (max-width: 930px) {
     .carousel__item-title {
@@ -1513,6 +1558,7 @@ input[type="checkbox"]:checked+label::before {
         right: 6%;
     }
 }
+
 /* ------------------------------------------------------MEDIA 768------------------------------------------ */
 @media (max-width: 768px) {
 
@@ -2022,14 +2068,8 @@ input[type="checkbox"]:checked+label::before {
         max-height: 240px;
     }
 }
-/* --------------------------------------------------------- ANIMATE ------------------------------------------ */
 
-
-/* @keyframes top-arrow{
-    0% { background-position: 3000px 80%, 180% 40%; }
-    100% { background-position: center, center 25%; }
-} */
-
+/* --------------------------------------------------------- ANIMATE ICONS ------------------------------------------ */
 
 #compas {
     transform-origin: 50% 50%;
@@ -2163,15 +2203,16 @@ input[type="checkbox"]:checked+label::before {
 
 #semantic-star1 {
     animation: semanticStar1 3s linear infinite;
-    opacity: 0;
+
 }
 
 @keyframes semanticStar1 {
-    20% {
+    0% {
         opacity: 0;
     }
 
-    27% {
+
+    40% {
         opacity: 1;
     }
 
@@ -2186,11 +2227,11 @@ input[type="checkbox"]:checked+label::before {
 }
 
 @keyframes semanticStar2 {
-    30% {
+    0% {
         opacity: 0;
     }
 
-    37% {
+    60% {
         opacity: 1;
     }
 
@@ -2205,11 +2246,12 @@ input[type="checkbox"]:checked+label::before {
 }
 
 @keyframes semanticStar3 {
-    40% {
+    0% {
         opacity: 0;
     }
 
-    47% {
+
+    70% {
         opacity: 1;
     }
 
@@ -2224,11 +2266,12 @@ input[type="checkbox"]:checked+label::before {
 }
 
 @keyframes semanticStar4 {
-    50% {
+    0% {
         opacity: 0;
     }
 
-    57% {
+
+    80% {
         opacity: 1;
     }
 
