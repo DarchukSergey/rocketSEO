@@ -77,26 +77,27 @@ $(function () {
                 }
             }],
 
-            
+
 
             responsive: [{
-                breakpoint: 768,
-                settings: {
-                    slidesToShow:2,
-                    infinite: true,
-                    initialSlide: 0,
-                    centerMode: false,
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        infinite: true,
+                        initialSlide: 0,
+                        centerMode: false,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1.08,
+                        infinite: true,
+                        initialSlide: 0,
+                        centerMode: false,
+                    }
                 }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow:1.08    ,
-                    infinite: true,
-                    initialSlide: 0,
-                    centerMode: false,
-                }
-            }],
+            ],
         });
 
         $slickElement.parent().find('.carousel__buttons-slider .carousel__buttons-next').click(function () {
@@ -107,26 +108,13 @@ $(function () {
         });
 
     });
+
     const chatIcon = new Vivus('chat', {
         type: 'oneByOne',
         duration: 250,
-    }, myVivus => {
-        if (myVivus.getStatus() === 'end') {
-            myVivus.reset().play();
-        }
-    });
-
-
-    // const chatIcons = new Vivus(
-    //     'solutions',
-    //     {
-    //         type: 'scenario',
-    //         duration: 300,
-    //         reverseStack:true,
-    //         delay: 200,
-    //     },myVivus => {
-    //         if (myVivus.getStatus() === 'end') {
-    //             myVivus.reset().play();
-    //         }
-    //     });
+        }, function(){
+            // chatIcon.reset()
+            setTimeout(function(){
+                chatIcon.reset().play()},2500)
+            });
 });

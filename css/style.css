@@ -95,15 +95,20 @@ section {
 
 .top {
     margin-bottom: 20px;
+    background-image: url('../img/rocket.gif');
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 250px;
 }
 
 .top__inner {
     min-height: 820px;
-    background-image: url('../img/header.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
+    background: url('../img/header.png') center no-repeat,
+                    url('../img/header2.png')  center 25% no-repeat;
+    background-size: auto, auto;
+    /* background-position:  3000px 80%, 280% 40% ;  */
     margin-top: 109px;
+    animation: top-arrow 2s 2s linear 1;
 }
 
 .top__title {
@@ -138,6 +143,9 @@ section {
     padding: 21px 0;
 }
 
+.animate__fadeIn{
+    --animate-duration: 3s;
+  }
 /* ----------------------------------------------------------------- NOEXPERIMENTS --------------------------------------------------------------------------- */
 
 .noexperiments {
@@ -1319,7 +1327,7 @@ input[type="checkbox"]:checked+label::before {
         padding-left: 20px;
     }
 }
-
+/* ------------------------------------------------- MEDIA 992 ----------------------------------------------- */
 @media (max-width: 992px) {
 
     .header,
@@ -1495,7 +1503,7 @@ input[type="checkbox"]:checked+label::before {
         display: none;
     }
 }
-
+/* ------------------------------------------------------MEDIA 930------------------------------------------ */
 @media (max-width: 930px) {
     .carousel__item-title {
         max-width: 210px;
@@ -1505,7 +1513,7 @@ input[type="checkbox"]:checked+label::before {
         right: 6%;
     }
 }
-
+/* ------------------------------------------------------MEDIA 768------------------------------------------ */
 @media (max-width: 768px) {
 
     .stages__inner {
@@ -1597,7 +1605,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 
-
+/*--------------------------------------------------------MEDIA 576 -----------------------------------------  */
 @media (max-width: 576px) {
     .header__inner {
         justify-content: space-between;
@@ -2014,6 +2022,13 @@ input[type="checkbox"]:checked+label::before {
         max-height: 240px;
     }
 }
+/* --------------------------------------------------------- ANIMATE ------------------------------------------ */
+
+
+/* @keyframes top-arrow{
+    0% { background-position: 3000px 80%, 180% 40%; }
+    100% { background-position: center, center 25%; }
+} */
 
 
 #compas {
@@ -2113,50 +2128,35 @@ input[type="checkbox"]:checked+label::before {
 
     15% {
         transform: rotate(-30deg) translate(-54px, 48px);
-        opacity: 1;
     }
 
     20% {
         transform: rotate(-20deg) translate(-46px, 40px);
-        opacity: 1;
     }
 
     25% {
         transform: rotate(-10deg) translate(-39px, 33px);
-        opacity: 1;
     }
 
     30% {
         transform: rotate(0deg) translate(-31px, 27px);
-        opacity: 1;
     }
 
     35% {
         transform: rotate(10deg) translate(-24px, 20px);
-        opacity: 1;
     }
 
     40% {
         transform: rotate(10deg) translate(-10px, 7px);
+    }
+
+    90% {
+        transform: rotate(10deg) translate(-10px, 7px);
         opacity: 1;
     }
 
-    50% {
-        transform: rotate(10deg) translate(-10px, 7px);
-        opacity: .9;
-    }
-
-    60% {
-        transform: rotate(10deg) translate(-10px, 7px);
-        opacity: .7;
-    }
-
-    70% {
-        transform: rotate(10deg) translate(-10px, 7px);
-        opacity: .4;
-    }
-
     100% {
+        transform: rotate(10deg) translate(-10px, 7px);
         opacity: 0;
     }
 }
@@ -2248,8 +2248,9 @@ input[type="checkbox"]:checked+label::before {
     25% {
         transform: rotate(0) scale(.8);
     }
+
     75% {
-        transform: rotate(75deg) scale(.8) ;
+        transform: rotate(75deg) scale(.8);
     }
 }
 
@@ -2259,15 +2260,16 @@ input[type="checkbox"]:checked+label::before {
 }
 
 @keyframes semanticCircle {
-    
+
     25% {
         stroke-width: 1;
     }
+
     75% {
         stroke-width: 1;
     }
 
-    
+
 }
 
 #chat-circle {
@@ -2405,12 +2407,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 #questions-arrow {
-    animation-name: questionsArrow;
-    animation-duration: 2.5s;
-    animation-timing-function: linear;
-    animation-delay: 2500ms;
-    animation-iteration-count: infinite;
-    /* animation: questionsArrow 2s  1s infinite; */
+    animation: questionsArrow 2.5s linear 2500ms infinite
 }
 
 @keyframes questionsArrow {
@@ -2449,15 +2446,7 @@ input[type="checkbox"]:checked+label::before {
 }
 
 #exclamation-arrow {
-    /* animation: exclamationArrow 2s  1s infinite; */
-
-    animation-name: exclamationArrow;
-    animation-duration: 2.5s;
-    animation-timing-function: linear;
-    animation-delay: 2500ms;
-    animation-iteration-count: infinite;
-    /* animation-fill-mode: как указано
-    animation-play-state: как указано */
+    animation: exclamationArrow 2.5s linear 2500ms infinite;
 }
 
 @keyframes exclamationArrow {
