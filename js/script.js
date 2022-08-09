@@ -112,9 +112,56 @@ $(function () {
     const chatIcon = new Vivus('chat', {
         type: 'oneByOne',
         duration: 250,
-        }, function(){
-            // chatIcon.reset()
-            setTimeout(function(){
-                chatIcon.reset().play()},2500)
-            });
+    }, function () {
+        // chatIcon.reset()
+        setTimeout(function () {
+            chatIcon.reset().play()
+        }, 2500)
+    });
+
+
+    gsap.registerPlugin(MotionPathPlugin);    
+
+    if (window.innerWidth > 1200) {
+    gsap.to(".rocket-img", {
+        duration: 3.5,
+        opacity: 1,         
+        transform: "rotateZ(55deg)",
+        delay: 1.5,
+        motionPath: {
+            path: document.querySelector('#path'),
+            align: "#path",
+            alignOrigin: [0.5, 0.5],
+        }});
+    } else if(window.innerWidth > 980){
+        gsap.to(".rocket-img", {
+            duration: 3.5,
+            opacity: 1,         
+            transform: "rotateZ(55deg)",
+            delay: 1.5,
+            motionPath: {
+                path: document.querySelector('#path'),
+                align: "#path",
+                alignOrigin: [1.17, -.3],
+        }});
+    } else if(window.innerWidth > 768){
+        gsap.to(".rocket-img", {
+            duration: 3.5,
+            opacity: 1,         
+            transform: "rotateZ(55deg)",
+            delay: 1.5,
+            motionPath: {
+                path: document.querySelector('#path'),
+                align: "#path",
+                alignOrigin: [1.75, -1],
+        }});
+    }else if(window.innerWidth > 576){
+        gsap.to(".rocket-img", {
+            duration: 3,
+            opacity: 1,
+            x: 0,
+            y: -830,
+            delay: 1.5,
+        });
+    }
 });

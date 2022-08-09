@@ -95,27 +95,24 @@ section {
 
 .top {
     margin-bottom: 20px;
-    background-image: url('../img/rocket.gif');
-    background-position: left 850px;
-    background-repeat: no-repeat;
-    background-size: 250px;
-    animation-delay: 2s;
-	animation-duration: 1s;
-	animation-name: rocket;
-	animation-iteration-count: 1;
-	animation-timing-function: linear;
-    animation-fill-mode:forwards;
+    /* background:url('../img/path.svg') center no-repeat;
+    background-size: auto; */
 }
 
-@keyframes rocket {
-    0% {
-        background-position: left 850px;
-    }
-
-    100% {
-        background-position: left bottom;
-    }
+#svg{
+    width: 100%;
+    position: absolute;
 }
+
+.rocket-img{
+    width: 220px;
+    height: 220px;
+    opacity: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
 
 .top__inner {
     min-height: 820px;
@@ -124,6 +121,8 @@ section {
     background-size: auto, auto;
     margin-top: 109px;
     animation: top-arrow 2s linear 1;
+    z-index: 5; 
+    /* position: relative; */
 }
 
 @keyframes top-arrow {
@@ -167,11 +166,11 @@ section {
     max-width: 260px;
     padding: 21px 0;
     animation-delay: 2s;
-	animation-duration: 2s;
-	animation-name: top-button;
-	animation-iteration-count: 1;
-	animation-timing-function: linear;
-    animation-fill-mode:forwards;
+    animation-duration: 2s;
+    animation-name: top-button;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
     opacity: 0;
 }
 
@@ -2055,9 +2054,10 @@ input[type="checkbox"]:checked+label::before {
 
 
 @media (max-width: 470px) {
-    .top__inner{
+    .top__inner {
         background-position: 20%;
     }
+
     .carousel__item {
         min-height: 260px;
         max-height: 260px;
