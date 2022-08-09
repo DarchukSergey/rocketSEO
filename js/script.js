@@ -25,16 +25,10 @@ $(function () {
             mobileFirst: true,
             dots: $dots,
             arrows: $arrows,
-            // centerMode: true,
-            // centerPadding: '15px',
             infinite: true,
             initialSlide: 0,
             centerMode: false,
-            // slidesToShow: 1.3,
             variableWidth: true,
-            //autoplay: true,
-            // prevArrow: '<button type="button" class="slick-prev"><span></span></button>',
-            // nextArrow: '<button type="button" class="slick-next"><span></span></button>',
             responsive: [{
                 breakpoint: $breakpoint,
                 settings: "unslick"

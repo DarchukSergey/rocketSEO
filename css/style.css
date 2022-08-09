@@ -101,7 +101,6 @@ section {
 
 #svg{
     width: 100%;
-    position: absolute;
 }
 
 .rocket-img{
@@ -145,7 +144,7 @@ section {
     text-align: center;
     letter-spacing: 0.02em;
     color: #FFFFFF;
-    padding-top: 190px;
+    padding-top: 40px;
     margin-bottom: 86px;
 }
 
@@ -785,8 +784,8 @@ section {
     background-image: url('../img/arrow-right.svg');
     background-repeat: no-repeat;
     transform: rotate(90deg);
-    width: 17px;
-    height: 11px;
+    width: 20px;
+    height: 27px;
     right: 0;
     transition: all 0.3s;
 }
@@ -1294,7 +1293,7 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .top__title {
-        padding-top: 125px;
+       
     }
 
     .noexperiments__items {
@@ -1671,6 +1670,10 @@ input[type="checkbox"]:checked+label::before {
     .top {
         margin-bottom: 0;
         background-image: none;
+    }
+    
+    #svg{
+        display: none;
     }
 
     .top__inner {
