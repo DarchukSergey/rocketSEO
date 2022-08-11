@@ -162,3 +162,12 @@ function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
 }
 
 mobileOnlySlider(".principes__items", false, false, 768);
+
+let oldWidth = window.innerWidth;
+window.onresize = function () {
+	let newWidth = window.innerWidth;
+	if (newWidth != oldWidth) {
+		oldWidth = newWidth;
+        location.reload();
+	}
+};
