@@ -19,40 +19,6 @@ $(function () {
         }
     });
 
-    function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
-        const slider = $($slidername);
-        const settings = {
-            mobileFirst: true,
-            dots: $dots,
-            arrows: $arrows,
-            infinite: true,
-            initialSlide: 0,
-            centerMode: false,
-            variableWidth: true,
-            responsive: [{
-                breakpoint: $breakpoint,
-                settings: "unslick"
-            }]
-        };
-
-        slider.slick(settings);
-
-        $(window).on("resize", function () {
-            if ($(window).width() > $breakpoint) {
-                return;
-            }
-            if (!slider.hasClass("slick-initialized")) {
-                return slider.slick(settings);
-            }
-        });
-    }
-
-    mobileOnlySlider(".principes__items", false, true, 768);
-
-
-
-
-
     $('.carousel__inner').each(function () {
         var $status = $('.carousel__buttons-counter');
         var $slickElement = $(this);
@@ -67,19 +33,16 @@ $(function () {
             responsive: [{
                 breakpoint: 992,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 2
                 }
-            }],
-
-
-
-            responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        infinite: true,
-                        initialSlide: 0,
-                        centerMode: false,
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    infinite: true,
+                    initialSlide: 0,
+                    centerMode: false,
                     }
                 },
                 {
@@ -107,55 +70,95 @@ $(function () {
         type: 'oneByOne',
         duration: 250,
     }, function () {
-        // chatIcon.reset()
         setTimeout(function () {
             chatIcon.reset().play()
         }, 2500)
     });
 
 
-    gsap.registerPlugin(MotionPathPlugin);    
+    gsap.registerPlugin(MotionPathPlugin); 
+    gsap.set(".rocket-img", {scale: 1, autoAlpha: 1});   
+   
 
-    if (window.innerWidth > 1200) {
-    gsap.to(".rocket-img", {
-        duration: 3.5,
-        opacity: 1,         
-        transform: "rotateZ(55deg)",
+    if (window.innerWidth > 768) {
+    gsap.fromTo(".rocket-img",{
+        opacity: 0,
+        scale: 1
+    },{        
+        duration: 3.5,     
         delay: 1.5,
+        immediateRender: true,
+        opacity: 1,
         motionPath: {
             path: document.querySelector('#path'),
             align: "#path",
             alignOrigin: [0.5, 0.5],
-        }});
-    } else if(window.innerWidth > 980){
-        gsap.to(".rocket-img", {
-            duration: 3.5,
-            opacity: 1,         
-            transform: "rotateZ(55deg)",
+            autoRotate: 80,
+        }
+    });
+    } else if(window.innerWidth > 576){
+        gsap.fromTo(".rocket-img",{
+            opacity: 0,
+            scale: .8
+        },{        
+            duration: 3,     
             delay: 1.5,
-            motionPath: {
-                path: document.querySelector('#path'),
-                align: "#path",
-                alignOrigin: [1.17, -.3],
-        }});
-    } else if(window.innerWidth > 768){
-        gsap.to(".rocket-img", {
-            duration: 3.5,
-            opacity: 1,         
-            transform: "rotateZ(55deg)",
-            delay: 1.5,
-            motionPath: {
-                path: document.querySelector('#path'),
-                align: "#path",
-                alignOrigin: [1.75, -1],
-        }});
-    }else if(window.innerWidth > 576){
-        gsap.to(".rocket-img", {
-            duration: 3,
+            immediateRender: true,
             opacity: 1,
-            x: 0,
-            y: -830,
+            motionPath: {
+                path: document.querySelector('#path'),
+                align: "#path",
+                alignOrigin: [0.5, 0.5],
+                autoRotate: 80,
+            }
+        });
+    }else if(window.innerWidth <= 576){
+        gsap.fromTo(".rocket-img",{
+            opacity: 0,
+            scale: .6
+        },{        
+            duration: 2.5,     
             delay: 1.5,
+            immediateRender: true,
+            opacity: 1,
+            motionPath: {
+                path: document.querySelector('#path'),
+                align: "#path",
+                alignOrigin: [.6, .3],
+                autoRotate: 80,
+            }
         });
     }
+    
 });
+
+
+function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+    const slider = $($slidername);
+    const settings = {
+        mobileFirst: true,
+        dots: $dots,
+        arrows: $arrows,
+        infinite: true,
+        initialSlide: 0,
+        centerMode: false,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: $breakpoint,
+            settings: "unslick"
+        }]
+    };
+
+    slider.slick(settings);
+
+    $(window).on("resize", function () {
+        if ($(window).width() > $breakpoint) {
+            return;
+        }
+        else if (!slider.hasClass("slick-initialized")) {
+            return slider.slick(settings);
+        }
+    });
+}
+
+mobileOnlySlider(".principes__items", false, false, 768);
