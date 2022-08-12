@@ -1,11 +1,17 @@
-let oldWidth = window.innerWidth;
-window.onresize = function () {
-	let newWidth = window.innerWidth;
-	if (newWidth != oldWidth) {
-		// oldWidth = newWidth;
-        location.reload();
-	}
-};
+// let oldWidth = window.innerWidth;
+// window.onresize = function () {
+// 	let newWidth = window.innerWidth;
+// 	if (newWidth != oldWidth) {
+// 		// oldWidth = newWidth;
+//         location.reload();
+// 	}
+// };
+
+
+window.onresize = function(event)
+{
+document.location.reload(true);
+}
 
 $(function () {
     $(".plan__accordion-title.active").next().slideDown();
