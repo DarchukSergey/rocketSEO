@@ -99,15 +99,16 @@ section {
     background-size: auto; */
 }
 
-/* #svg {
+#svg {
     overflow: visible;
     height: 100%;
     max-width: 100%;
-} */
+}
 
 .rocket-img {
     width: 220px;
     height: 220px;
+    object-fit:contain; 
     opacity: 0;
     left: 0;
     bottom: 0;
@@ -407,7 +408,7 @@ section {
     border-bottom: 1px solid var(--white);
     border-right: 1px solid var(--white);
     width: 43px;
-    height: 351px;
+    height: 380px;
     right: -20px;
     border-radius: 0 32px 32px 0;
     top: 20px;
@@ -470,6 +471,7 @@ section {
     right: 50%;
     width: 2px;
     height: 68%;
+    transform: translateX(-50%);
 }
 
 
@@ -492,8 +494,9 @@ section {
     background-repeat: no-repeat;
     width: 17px;
     height: 17px;
-    right: -108px;
+    right: -27%;
     top: 16px;
+    transform: translateX(-50%);
 }
 
 .why__item:nth-child(even)::after {
@@ -503,8 +506,9 @@ section {
     background-repeat: no-repeat;
     width: 17px;
     height: 17px;
-    left: -111px;
+    left: -28.5%;
     top: 22px;
+    transform: translateX(50%);
 }
 
 .why__img {
@@ -1351,6 +1355,18 @@ input[type="checkbox"]:checked+label::before {
 
 /* ---------------------------------------------- MEDIA --------------------------------------------------- */
 
+@media (max-width: 1227px){
+    .why__item:nth-child(odd)::before {
+        right: -25.5%;
+        transform: translateX(-50%);
+    }
+
+    .why__item:nth-child(even)::after {
+        left: -22.5%;
+        transform: translateX(-50%);
+    }
+}
+
 @media (max-width: 1200px) {
     .top__inner {
         min-height: 700px;
@@ -1417,6 +1433,9 @@ input[type="checkbox"]:checked+label::before {
         /* left: -104px; */
         display: none;
     }
+
+ 
+    
 
     .result__price-inner {
         padding: 27px 94px;
@@ -1622,6 +1641,10 @@ input[type="checkbox"]:checked+label::before {
     .carousel__item-text h4::after {
         right: 6%;
     }
+    .carousel__item {
+        min-height: 320px;
+        max-height: 320px;
+    }
 }
 
 /* ------------------------------------------------------MEDIA 768------------------------------------------ */
@@ -1690,8 +1713,12 @@ input[type="checkbox"]:checked+label::before {
 
     .principes__item-content {
         padding: 20px 17px 44px;
-        max-height: 240px;
-        min-height: 240px;
+        max-height: 330px;
+        min-height: 330px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
     .principes__item {
@@ -1817,8 +1844,8 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .principes__item-content {
-        max-height: 200px;
-        min-height: 200px;
+        max-height: 230px;
+        min-height: 230px;
     }
 
     .why__head {

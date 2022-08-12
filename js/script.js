@@ -1,3 +1,12 @@
+let oldWidth = window.innerWidth;
+window.onresize = function () {
+	let newWidth = window.innerWidth;
+	if (newWidth != oldWidth) {
+		// oldWidth = newWidth;
+        location.reload();
+	}
+};
+
 $(function () {
     $(".plan__accordion-title.active").next().slideDown();
     $(".plan__accordion-title").on("click", function () {
@@ -48,7 +57,7 @@ $(function () {
                 {
                     breakpoint: 576,
                     settings: {
-                        slidesToShow: 1.08,
+                        slidesToShow: 1.05,
                         infinite: true,
                         initialSlide: 0,
                         centerMode: false,
@@ -118,6 +127,7 @@ $(function () {
             scale: .6
         },{        
             duration: 2.5,     
+            ease: "power1.inOut",
             delay: 1.5,
             immediateRender: true,
             opacity: 1,
@@ -129,45 +139,39 @@ $(function () {
             }
         });
     }
+    function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+        const slider = $($slidername);
+        const settings = {
+            mobileFirst: true,
+            dots: $dots,
+            arrows: $arrows,
+            infinite: true,
+            initialSlide: 0,
+            centerMode: false,
+            variableWidth: true,
+            responsive: [{
+                breakpoint: $breakpoint,
+                settings: "unslick"
+            }]
+        };
+    
+        slider.slick(settings);
+    
+        $(window).on("resize", function () {
+            if ($(window).width() > $breakpoint) {
+                return slider.hasClass("slick-initialized");
+            }
+            else if (!slider.hasClass("slick-initialized")) {
+                return slider.slick(settings);
+            }
+        });
+    }
+    
+    mobileOnlySlider(".principes__items", false, false, 768);
+    
+    
+    
     
 });
 
 
-function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
-    const slider = $($slidername);
-    const settings = {
-        mobileFirst: true,
-        dots: $dots,
-        arrows: $arrows,
-        infinite: true,
-        initialSlide: 0,
-        centerMode: false,
-        variableWidth: true,
-        responsive: [{
-            breakpoint: $breakpoint,
-            settings: "unslick"
-        }]
-    };
-
-    slider.slick(settings);
-
-    $(window).on("resize", function () {
-        if ($(window).width() > $breakpoint) {
-            return;
-        }
-        else if (!slider.hasClass("slick-initialized")) {
-            return slider.slick(settings);
-        }
-    });
-}
-
-mobileOnlySlider(".principes__items", false, false, 768);
-
-let oldWidth = window.innerWidth;
-window.onresize = function () {
-	let newWidth = window.innerWidth;
-	if (newWidth != oldWidth) {
-		oldWidth = newWidth;
-        location.reload();
-	}
-};
