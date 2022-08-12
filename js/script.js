@@ -7,11 +7,13 @@
 // 	}
 // };
 
-
-window.onresize = function(event)
-{
-document.location.reload(true);
-}
+var s_win_w = $(window).width();
+$(window).resize(function(){
+  win_w = $(window).width();
+  if (win_w >= s_win_w*1.3 || win_w <= s_win_w*0.7) {
+    location.reload();
+  }
+}); 
 
 $(function () {
     $(".plan__accordion-title.active").next().slideDown();
