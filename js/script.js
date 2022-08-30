@@ -1,12 +1,3 @@
-// let oldWidth = window.innerWidth;
-// window.onresize = function () {
-// 	let newWidth = window.innerWidth;
-// 	if (newWidth != oldWidth) {
-// 		// oldWidth = newWidth;
-//         location.reload();
-// 	}
-// };
-
 var s_win_w = $(window).width();
 $(window).resize(function(){
   win_w = $(window).width();
