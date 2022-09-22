@@ -20,10 +20,10 @@
         <div class="wrapper">
             <div class="header__inner">
                 <a href="#">
-                    <img src="img/logo.svg" alt="" class="logo__header">
+                    <img class="logo__header" src="img/logo.svg" alt="">
                 </a>
                 <div class="header__burger">
-                    <img class="header__burger-img" src="img/burger.svg">
+                    <img class="header__burger-img" src="img/burger.svg" alt="">
                 </div>
             </div>
         </div>
@@ -32,7 +32,8 @@
         <div class="top__inner ">
             <div class="wrapper">
                 <svg fill="none" id="svg" viewBox="0 0 1300 180">
-                    <path id="path"d="M0.999847 1067C0.999847 1067 -18.0002 485 183 332C384 179 1101 0.999969 1101 0.999969"
+                    <path id="path"
+                        d="M0.999847 1067C0.999847 1067 -18.0002 485 183 332C384 179 1101 0.999969 1101 0.999969"
                         stroke="none " />
                 </svg>
                 <img class="rocket-img" src="img/rocket.gif" alt="">
@@ -143,10 +144,6 @@
                                     d="M42.1256 24.2044L40.1704 26.95L39.7005 25.9199L33.17 28.49L32.76 27.4999L39.3003 24.87L38.8612 23.8612L42.1256 24.2044Z"
                                     fill="#FF4500" />
                             </svg>
-
-
-
-
                             <h3 class="principes__title">С нами результат быстрее</h3>
                             <p class="principes__text">Первые месяцы работы над проектом мы перерабатываем сверх плана
                                 окупаемости,
@@ -267,46 +264,107 @@
                 </ul>
             </div>
         </div>
-        </div>
     </section>
     <section class="why">
         <div class="wrapper">
             <h2 class="why__head">Почему мы</h2>
             <div class="why__inner">
-                <ul class="why__items">
-                    <li class="why__item">
+                <div class="why-timeline-block timeline-block-left">
+                    <div class="marker">
+                        <svg id="marker1" width="17" height="17" viewBox="0 0 17 17" fill="000" xmlns="http://www.w3.org/2000/svg" stroke="#FFFFFF">
+                            <path
+                                d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
+                                />
+                            <path
+                                d="M5 8.5C5 6.567 6.567 5 8.5 5C10.433 5 12 6.567 12 8.5C12 10.433 10.433 12 8.5 12C6.567 12 5 10.433 5 8.5Z"
+                                />
+                        </svg>
+                    </div>
+                    <div class="why__item  timeline-content ">
                         <img class="why__img" src="img/why-seo.svg" alt="image1">
                         <h4 class="why__title">Собственный SEO отдел</h4>
                         <p class="why__text">Собственные отделы копирайтинга, линкбилдинга и разработки позволяют
                             минимизировать затраты наших клиентов,исключив подрядчиков, и максимизировать качество и
                             контроль предоставляемой услуги.</p>
-                    </li>
-                    <li class="why__item">
-                        <img class="why__img" src="img/why-kpi.svg" alt="image2">
+                    </div>
+                </div>
+
+                <div class="why-timeline-block timeline-block-right">
+                    <div class="marker">
+                        <svg id="marker2" width="17" height="17" viewBox="0 0 17 17" fill="000" xmlns="http://www.w3.org/2000/svg" stroke="#FFFFFF">
+                            <path
+                                d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
+                                />
+                            <path
+                                d="M5 8.5C5 6.567 6.567 5 8.5 5C10.433 5 12 6.567 12 8.5C12 10.433 10.433 12 8.5 12C6.567 12 5 10.433 5 8.5Z"
+                                />
+                        </svg>
+                    </div>
+                    <div class="why__item timeline-content">
+                        <img class="why__img" src="img/why-kpi.svg" alt="image1">
                         <h4 class="why__title">Объективное KPI по SEO</h4>
                         <p class="why__text">Нашим KPI по SEO является показатель роста органического трафика, который
                             превращается в целевых и качественных пользователей с высоким показателем конверсии.</p>
-                    </li>
-                    <li class="why__item">
+                    </div>
+                </div>
+                <div class="why-timeline-block timeline-block-left">
+                    <div class="marker">
+                        <svg id="marker3" width="17" height="17" viewBox="0 0 17 17" fill="000" xmlns="http://www.w3.org/2000/svg" stroke="#FFFFFF">
+                            <path
+                                d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
+                                />
+                            <path
+                                d="M5 8.5C5 6.567 6.567 5 8.5 5C10.433 5 12 6.567 12 8.5C12 10.433 10.433 12 8.5 12C6.567 12 5 10.433 5 8.5Z"
+                                />
+                        </svg>
+                    </div>
+                    <div class="why__item timeline-content ">
                         <img class="why__img" src="img/why-metodology.svg" alt="image3">
                         <h4 class="why__title">Собственные методологии</h4>
                         <p class="why__text">Собственные зарубежные и локальные проекты позволяют нам поддерживать
-                            актуальность знаний и быстро реагировать на изменения алгоритмов поисковых систем
+                            актуальность знаний и б ыстро реагировать на изменения алгоритмов поисковых систем
                             корректируя стратегию продвижения.</p>
-                    </li>
-                    <li class="why__item">
+                    </div>
+                </div>
+
+                <div class="why-timeline-block timeline-block-right">
+                    <div class="marker">
+                        <svg id="marker4" width="17" height="17" viewBox="0 0 17 17" fill="000" xmlns="http://www.w3.org/2000/svg" stroke="#FFFFFF">
+                            <path
+                                d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
+                                />
+                            <path
+                                d="M5 8.5C5 6.567 6.567 5 8.5 5C10.433 5 12 6.567 12 8.5C12 10.433 10.433 12 8.5 12C6.567 12 5 10.433 5 8.5Z"
+                                />
+                        </svg>
+                    </div>
+                    <div class="why__item timeline-content">
                         <img class="why__img" src="img/why-promotion.svg" alt="image4">
                         <h4 class="why__title">Двигаем сайты в высококонкурентных нишах</h4>
                         <p class="why__text">Мы работаем в таких высококонкурентных нишах как health, essay, crypto,
                             e-commerce и др. Продвигаем сайты под США, Австралию и Европу.</p>
-                    </li>
-                    <li class="why__item">
+                    </div>
+                </div>
+
+
+                <div class="why-timeline-block timeline-block-left">
+                    <div class="marker">
+                        <svg id="marker5" width="17" height="17" viewBox="0 0 17 17" fill="000" xmlns="http://www.w3.org/2000/svg" stroke="#FFFFFF">
+                            <path
+                                d="M8.5 16C12.6421 16 16 12.6421 16 8.5C16 4.35786 12.6421 1 8.5 1C4.35786 1 1 4.35786 1 8.5C1 12.6421 4.35786 16 8.5 16Z"
+                                />
+                            <path
+                                d="M5 8.5C5 6.567 6.567 5 8.5 5C10.433 5 12 6.567 12 8.5C12 10.433 10.433 12 8.5 12C6.567 12 5 10.433 5 8.5Z"
+                                />
+                        </svg>
+                    </div>
+                    <div class="why__item timeline-content">
                         <img class="why__img" src="img/why-dive.svg" alt="image5">
                         <h4 class="why__title">Погружение в нишу проекта</h4>
                         <p class="why__text">Все погружаются в нишу и мы тоже! С важным отличием – мы показываем
                             реальные новые точки роста, а не напрямую копируем стратегию конкурентов.</p>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -560,8 +618,6 @@
                     <div class="plan__accordion">
                         <h4 class="plan__accordion-title title--span">Третий месяц</h4>
                         <ul class="plan__accordion-items">
-
-                            </li>
                             <li class="plan__accordion-item">
                                 <p class="plan__accordion-text">Аудит факторов Е-А-Тиц</p>
                             </li>
@@ -726,7 +782,7 @@
                                 <div class="">
                                     <div class="proposal__form-input field_group">
                                         <label class="proposal__input-title" for="form-name">
-                                            <p>Здравствуйте, меня зовут</p>
+                                            Здравствуйте, меня зовут
                                         </label>
                                         <input class="proposal__input-line field" size="1" type="text" name="full_name"
                                             id="form-name" placeholder="Введите имя и фамилию" required="required">
@@ -734,7 +790,7 @@
 
                                     <div class="proposal__form-input field_group">
                                         <label class="proposal__input-title" for="form-company">
-                                            <p>Я представляю компанию</p>
+                                            Я представляю компанию
                                         </label>
                                         <input class="proposal__input-line field" id="form-company" size="1" type="text"
                                             name="company" placeholder="Введите название компании или адрес сайта"
@@ -742,10 +798,9 @@
                                     </div>
                                     <div class="proposal__form-radio">
                                         <div class="proposal__form-task">
-                                            <label class="proposal__form-task_title proposal__input-title"
-                                                for="form-task">
+                                            <div class="proposal__form-task_title proposal__input-title">
                                                 <p>Моя задача</p>
-                                            </label>
+                                            </div>
                                             <div class="proposal__form-task_inner">
                                                 <span class="proposal__form-task_radio">
                                                     <input type="radio" value="Вывести сайт в TOP" id="task_top"
@@ -766,9 +821,9 @@
                                         </div>
 
                                         <div class="proposal__form-budget ">
-                                            <label class="proposal__form-budget_title proposal__input-title" for="">
-                                                <p>Бюджет, на который я рассчитываю</p>
-                                            </label>
+                                            <div class="proposal__form-budget_title proposal__input-title">
+                                                Бюджет, на который я рассчитываю
+                                            </div>
 
                                             <div class="proposal__form-budget_inner">
                                                 <span class="proposal__form-budget-radio">
@@ -797,7 +852,7 @@
 
                                     <div class="proposal__form-input field_group">
                                         <label class="proposal__input-title" for="contact_number">
-                                            <p>Мой контактный номер</p>
+                                            Мой контактный номер
                                         </label>
                                         <input class="proposal__input-line field" id="contact_number" size="1"
                                             type="tel" name="phone" placeholder="Введите номер вашего телефона"
@@ -807,7 +862,7 @@
 
                                     <div class="proposal__form-input field_group">
                                         <label class="proposal__input-title" for="contact_email">
-                                            <p>Мой контактный email</p>
+                                            Мой контактный email
                                         </label>
                                         <input class="proposal__input-line field" size="1" type="email" name="email"
                                             id="contact_email" placeholder="Введите адрес вашей электронной почты"
